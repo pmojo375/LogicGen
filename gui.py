@@ -21,7 +21,19 @@ def findAndReplace(text, words_to_replace, replacement_words):
     return text
 
 def faultGen(parent_tags: list, fault_tag: list, word_start: int, bit_start: int, child_tags: list = None):
-    # outputs XIC(ParentTag.ChildTag)OTL(FaultTag)[Word].Bit);   ') or omits the child tag if its none for each parent tag
+    """
+    Generates fault logic based on the provided parameters.
+
+    Args:
+        parent_tags (list): List of parent tags.
+        fault_tag (list): List of fault tags.
+        word_start (int): Starting word index.
+        bit_start (int): Starting bit index.
+        child_tags (list, optional): List of child tags. Defaults to None.
+
+    Returns:
+        str: Generated fault logic.
+    """
 
     output = ''
 
